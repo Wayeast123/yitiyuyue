@@ -1,0 +1,46 @@
+<!--index.wxml-->
+<i-notice-bar wx:if="{{noticeContent}}" backgroundcolor="#F6F6F6" icon="systemprompt" loop color="#5997FE">
+  {{noticeContent}}
+</i-notice-bar>
+<view>
+  <!-- 背景 -->
+  <view class="bg"></view>
+  <!-- 主体内容 -->
+  <view class="contain" style="margin-top: {{noticeContent ? '100rpx' : '28rpx'}}">
+    <view class="search-header">{{todayDate}}  {{todayWeek}}</view>
+    <view class="search-con" wx:if="{{list.length > 0}}">
+      <block wx:for="{{list}}" wx:key="item">
+        <view class="flex report-con {{item.openNum - item.total ? '' : 'disable-line'}}">
+          <view class="flex">
+            <view class="flex item-left">
+              <image class="item-img" src="https://i.loli.net/2021/04/11/U4egWRyp3wrjsto.png"></image>
+            </view>
+            <view class="item-center">
+              <view class="report-title">
+                <text>{{item.sessionTime}}</text>
+              </view>
+              <view class="flex font-style report-date report-title">
+                <view>开放人数：{{item.openNum}}人</view>
+                <view class="margin-left-space">剩余空位：{{(item.openNum - item.total) < 0 ? '0' : item.openNum - item.total}}人</view>
+              </view>
+            </view>
+          </view>
+          <view class="flex item-right item-left" wx:if="{{item.openNum - item.total}}">
+            <button data-id="{{item.bookingId}}" class="btn collect-btn" bindtap="cancelCertain" wx:if="{{item.bookingId}}">取消预约</button>
+            <button data-id="{{item.sessionId}}" class="btn write-btn" bindtap="reservation" wx:else>预约</button>
+          </view>
+          <view wx:if="{{ visible }}">
+            <i-modal visible="{{ visible }}" bind:ok="cancelReservation" bind:cancel="handleCancel">
+              <view>是否确认取消当前预约？</view>
+            </i-modal>
+          </view>
+        </view>
+      </block>
+    </view>
+    <view class="flex empty" wx:else>
+      <image src="../../assets/images/empty.png" class="list-img"></image>
+      <view class="empty-text">对不起，暂无开放信息！</view>
+    </view>
+  </view>
+</view>
+<i-toast id="toast" />

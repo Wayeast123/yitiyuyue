@@ -1,0 +1,10 @@
+{
+  "usingComponents": {
+    "i-toast": "../../dist/toast/index",
+    "i-button": "../../dist/button/index",
+    "i-modal": "../../dist/modal/index"
+  } ,
+  "navigationBarTitleText":"门票卡",
+  "navigationBarBackgroundColor": "#5F9CFE",
+  "navigationBarTextStyle": "white"
+}

@@ -1,0 +1,85 @@
+<!--pages/mine/mine.wxml-->
+<!-- 遮罩层 -->
+<!-- <view wx:if="{{visible}}"> -->
+  <!-- <view class="mask" bindtap="closeMask"></view> -->
+  <!-- 在线咨询弹出框 -->
+  <!-- <view class="detail-con">
+    <view class="sheet-header contact-con">联系我们</view>
+    <view class="flex header-icon"> 
+      <i-icon type="close" size="22" color="#191919" class="icon-close" bindtap="closeMask"/>
+    </view>
+    <view class="flex sheet-header space-margin">
+      <view class="iconfont iconlianxiwomen icon-size"></view>
+      <view class="phone-number">18316968377</view>
+    </view>
+    <view class="flex btn-con">
+      <button class="btn gennerateBtn" bindtap="callUs">复制电话联系我们</button>
+    </view>
+  </view> -->
+<!-- </view> -->
+<view>
+  <!-- 背景蓝色 -->
+  <view class="bg"></view>
+  <view class="contain">
+    <!-- 个人信息 -->
+    <view class="per-info">
+      <view class="flex per-header">
+        <view class="ico" >
+          <open-data type="userAvatarUrl"></open-data>
+        </view>
+        <!-- <image class="ico" src="{{userIco}}"></image> -->
+        <view class="detail-info">
+          <view class="user-name">
+            <open-data type="userNickName"></open-data>
+          </view>
+          <!-- <view class="user-name">{{userName}}</view> -->
+          <view class="user-info">{{name}}  {{stu_number}}</view>
+        </view>
+      </view>
+      <view class="service-con">
+        <view class="service-title">我的服务</view>
+        <view class="flex service-flex">
+          <block wx:for="{{service}}" wx:key="item">
+            <view class="flex service-item" data-index="{{index}}" bindtap="navSerTo">
+              <view>
+                <view class="iconfont {{item.url}} service-img" wx:if="{{index == 0 || index == 3}}"></view>
+                <view class="iconfont {{item.url}} service-img-little" wx:else></view>
+              </view>
+              <!-- <image src="{{item.url}}" class="service-img"></image> -->
+              <text class="service-text">{{item.title}}</text>
+            </view>
+          </block>
+        </view>
+      </view>
+    </view>
+    <!-- 列表功能 -->
+    <view class="service-info">
+      <view class="service-con">
+        <view class="flex sysservice-flex">
+          <view wx:for="{{sysServe}}" wx:key="item" class="flex flex-justify">
+            <view class="iconfont {{item.url}} sysservice-img"></view>
+            <!-- <image src="{{item.url}}" class="sysservice-img"></image> -->
+            <view data-url="{{item.src}}" bindtap="{{item.title != '在线反馈' ? 'navTo' : ''}}" class="flex sysservice-item flex-item-right {{index == 2 ? 'non-border' : ''}}" hover-class="item-hover">
+              <view class="btn-contact">
+                <button class="non-btn sysservice-text" open-type='contact' wx:if="{{item.title == '在线反馈'}}">{{item.title}}</button>
+                <text class="sysservice-text" wx:else>{{item.title}}</text>
+              </view>
+              <i-icon type="enter" color="#80848f"/>
+            </view>
+          </view>
+        </view>
+        <!-- <view class="service-title">合作企业</view>
+        <view class="service-coo">
+          <view  class="flex flex-coo">
+            <image src="https://i.loli.net/2021/04/17/qGmAu9gzYCfBatM.png" class="coo-img"></image>
+            <view class="coo-text">简历社交</view>
+          </view>
+        </view> -->
+      </view>
+    </view>
+  </view>
+</view>
+<i-modal visible="{{ visible }}" bind:ok="logout" bind:cancel="closeMask">
+  <view>是否确认退出登录？</view>
+</i-modal>
+<i-toast id="toast" />

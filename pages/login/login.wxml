@@ -1,0 +1,18 @@
+<!--pages/login/login.wxml-->
+<view class="contain">
+  <view class="tr">
+    <view class="title"><i-icon type="mine" size="30" color="#80848f" class="icon"/>姓名</view>
+    <input class="content" placeholder="请输入姓名" placeholder-class="palceholder" bindinput="userInput"/>
+  </view>
+  <view class="tr">
+    <view class="title"><i-icon type="barrage" size="30" color="#80848f" class="icon"/>学号</view>
+    <view class="flex flex-center input-pwd">
+      <input class="content-noline" placeholder="请输入学号" placeholder-class="palceholder" type="{{pwdType}}" bindinput="pwdInput"/>
+      <i-icon type="browse_fill" size="25" color="#{{iconColor}}" bindtap="showPwd"/>
+    </view>
+  </view>
+  <view class="info_btn">
+    <button style="width:100%" bindtap="bindUser" class="btn" hover-class="btn_hover">登录</button>
+  </view>
+</view>
+<i-toast id="toast" />

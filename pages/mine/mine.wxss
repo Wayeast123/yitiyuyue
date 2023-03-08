@@ -1,0 +1,245 @@
+/* pages/mine/mine.wxss */
+@import '../../iconfont.wxss';
+page{
+  background-color: #fafafa;
+}
+.flex{
+  display: flex;
+}
+/* 个人信息展示 */
+.bg{
+  height: 35vh;
+  background-color: #619FFF;
+}
+.contain{
+  padding: 30rpx;
+}
+.per-info{
+  background-color: #fff;
+  border-radius: 26rpx;
+  margin-top: 40rpx;
+  /* margin-top: -32vh; */
+  box-shadow: 0 3rpx 6rpx rgba(137, 135, 135, .3);
+}
+.per-header{
+  padding: 18rpx;
+  border-bottom: 2px solid #f0f0f0;
+}
+.ico{
+  width: 121rpx;
+  height: 121rpx;
+  border-radius: 50%;
+  margin-top: -60rpx;
+  margin-left: 24rpx;
+  overflow: hidden;
+  box-shadow: 1px 3px 6px rgba(0,0,0,.28);
+}
+.detail-info{
+  margin-left: 30rpx;
+}
+.user-name{
+  font-size: 38rpx;
+  font-weight: 600;
+  letter-spacing: 4rpx;
+  color: #333;
+}
+.user-info{
+  font-size: 30rpx;
+  color: #666;
+  margin-top: 10rpx;
+}
+/* 我的服务 */
+.service-con{
+  padding: 23rpx 40rpx;
+}
+.service-title{
+  font-weight: 600;
+  font-size: 35rpx;
+  color:#333;
+  letter-spacing: 5rpx;
+  margin-top: 25rpx;
+}
+.service-flex{
+  justify-content: space-between;
+  margin: 30rpx 0rpx;
+}
+.service-item{
+  width: 25vw;
+  flex-direction: column;
+  align-items: center;
+}
+.service-text{
+  font-size: 27rpx;
+  color: #666;
+  margin-top: 10rpx;
+  letter-spacing: 4rpx;
+  font-weight: 600;
+}
+.service-img{
+  font-size: 70rpx;
+}
+.service-img-little{
+  font-size: 60rpx;
+  margin: 5rpx 0rpx 9rpx 0rpx;
+}
+/* 系统服务 */
+.service-info{
+  background-color: #fff;
+  border-radius: 26rpx;
+  margin-top: 50rpx;
+  box-shadow: 0 3rpx 6rpx rgba(137, 135, 135, .3);
+}
+.sysservice-flex{
+  flex-direction: column;
+}
+.sysservice-item{
+  height: 100%;
+  padding: 15rpx 0rpx;
+  align-items: center;
+  align-content: center;
+}
+.sysservice-img{
+ font-size: 46rpx;
+}
+.sysservice-text{
+  font-size: 29rpx;
+  color: #666;
+  letter-spacing: 4rpx;
+  font-weight: 600;
+  line-height: 40rpx;
+  /* margin-left: 30rpx; */
+}
+.test-text{
+  font-size: 27rpx;
+  color: #666;
+  letter-spacing: 4rpx;
+  font-weight: 500;
+}
+.non-border{
+  border: none;
+}
+.item-hover{
+  background-color: rgba(153, 193, 253, 0.1);
+}
+.flex-justify{
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25rpx;
+}
+.flex-item-right{
+  width: 100%;
+  justify-content: space-between;
+  border-bottom: 1px solid #e1e1e1;
+  margin-left: 20rpx;
+}
+.coo-img{
+  width: 110rpx;
+  height: 110rpx;
+}
+.flex-coo{
+  flex-direction: column;
+  /* align-items: center; */
+  justify-content: center;
+}
+.service-coo{
+  margin-top: 20rpx;
+  font-size: 28rpx;
+  margin-left: 20rpx;
+}
+.coo-text{
+  margin-top: 10rpx;
+}
+.non-btn::after{ 
+  border: none; 
+}
+.btn-contact{
+  width: 100%;
+}
+.non-btn{
+  border: none;
+  background-color: #fff;
+  padding: 0rpx;
+  font-size: 29rpx;
+  line-height: 40rpx;
+  display: block;
+  width: 100%;
+  text-align: left;
+}
+/* 详情弹出层样式 */
+.mask{
+  width:100%;
+  height:100%;
+  position:fixed;
+  /* position: relative; */
+  top:0rpx;
+  height: 100%;
+  z-index: 1000;
+  background-color: rgba(8, 8, 8, 0.7);
+}
+.detail-con{
+  position: fixed;
+  box-sizing: border-box;
+  width: 100%;
+  bottom: 0rpx;
+  left: 0rpx;
+  z-index: 1200;
+  background-color: #fff;
+}
+.detail-con{
+  height: 30vh;
+  border-top-left-radius: 10rpx;
+  border-top-right-radius: 10rpx;
+  padding: 30rpx 20rpx 20rpx 40rpx;
+}
+.contain{
+  position: absolute;
+  top:0rpx;
+  left: 0rpx;
+  z-index: 100;
+  width: 100vw;
+  box-sizing: border-box;
+}
+.sheet-header{
+  text-align: center;
+}
+.header-icon{
+  justify-content: flex-end;
+  margin-top: -48rpx;
+}
+.contact-con{
+  width: 100%;
+  font-size: 36rpx;
+  color: #181818;
+  text-align: center;
+  letter-spacing: 4rpx;
+}
+space-margin{
+  margin: 20rpx 0rpx;
+}
+.phone-number{
+  color: #181818;
+  letter-spacing: 3rpx;
+  font-size: 34rpx;
+  margin-left: 10rpx;
+}
+.space-margin{
+  justify-content: center;
+  align-items: center;
+  margin: 50rpx 0rpx;
+}
+.icon-size{
+  font-size: 38rpx;
+}
+.gennerateBtn{
+  padding: 10rpx 140rpx;
+  border-radius: 40rpx;
+  background-color: #3186FF;
+  color: #fff;
+  letter-spacing: 0rpx;
+  font-size: 30rpx;
+  line-height: 55rpx;
+  border: 1px solid #3186FF;
+}
+.btn-con{
+  justify-content: center;
+}

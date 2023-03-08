@@ -1,0 +1,125 @@
+/* pages/passCard/passCard.wxss */
+page{
+  height: 100%;
+  width: 100%;
+  /* background: linear-gradient(rgba(89,151,254, 1), rgba(255,255,255,1));  */
+}
+.flex{
+  display: flex;
+}
+.contain{
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(rgba(89,151,254, 1), rgba(255,255,255,1)); 
+}
+.contain-empty{
+  background: #F6F6F6;
+}
+.fill-con{
+  background-color: #fff;
+  border-radius: 30rpx;
+  width: 75vw;
+  height: 77vh;
+  padding: 37rpx;
+  letter-spacing: 3rpx;
+  box-shadow: 0rpx 3rpx 6rpx rgba(212, 212, 212, 0.61);
+}
+.fill-title{
+  font-size: 55rpx;
+  font-weight: 600;
+  text-align: center;
+  margin-top: 5rpx;
+  /* color: red; */
+  color: #666;
+}
+.fill-title-little{
+  font-weight: 600;
+  font-size: 50rpx;
+  text-align: center;
+  margin-top: 5rpx;
+  color: #F23D3D;
+  /* color: #666; */
+}
+.fill-item{
+  margin-top: 100rpx;
+  justify-content: space-between;
+}
+.fill-item-title{
+  font-size: 40rpx;
+  font-weight: 600;
+  letter-spacing: 2rpx;
+}
+.fill-item-info{
+  font-size: 32rpx;
+  /* font-weight: 600; */
+  letter-spacing: 6rpx;
+}
+.fill-input{
+  padding: 0rpx 10rpx;
+  width: 58%;
+  font-size: 35rpx;
+  text-align: center;
+  border-bottom: 1px solid #000;
+}
+.margin-top{
+  margin-top: 60rpx;
+}
+.info-text{
+  color: #3C35FF;
+  margin-top: 46rpx;
+}
+.cancel-btn{
+  font-weight: bold;
+  background-color: #5996FF;
+  border-radius: 50rpx;
+  letter-spacing: 6rpx;
+  color: #ffffff;
+  text-align: center;
+  font-size: 33rpx;
+  margin-top: 120rpx;
+}
+.ana-btn-hover{
+  background-color: rgba(89,150,255,0.9);
+}
+.space-margin{
+  margin-left: 20rpx;
+}
+.info-style{
+  font-size: 35rpx;
+  color: #5996FF;
+  font-weight: 600;
+  text-align: center;
+  margin-top: 30rpx;
+}
+.info-label{
+  font-weight: 500;
+  margin-top: 10rpx;
+}
+.flex-center{
+  justify-content: center;
+  margin-top: 50rpx;
+}
+.list-img{
+  width: 320rpx;
+  height: 320rpx;
+  opacity: 0.6;
+}
+.no-opacity{
+  opacity: 1;
+}
+.empty{
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+  justify-content: center;
+  height: 80vh;
+}
+.empty-text{
+  font-size: 36rpx;
+  color: #999;
+  margin-top: 35rpx;
+}
+/* .number{
+  margin-top: 60rpx;
+} */

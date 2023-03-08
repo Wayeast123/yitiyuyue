@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "i-toast": "../../dist/toast/index"
+  },
+  "navigationBarTitleText":"预约记录",
+  "navigationBarBackgroundColor": "#5F9CFE",
+  "navigationBarTextStyle": "white"
+}

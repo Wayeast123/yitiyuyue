@@ -1,0 +1,12 @@
+{
+  "usingComponents": {
+    "i-icon": "../../dist/icon/index",
+    "i-button": "../../dist/button/index",
+    "i-toast": "../../dist/toast/index",
+    "i-modal": "../../dist/modal/index",
+    "i-notice-bar": "../../dist/notice-bar/index"
+  },
+  "navigationBarTitleText":"预约",
+  "navigationBarBackgroundColor": "#5F9CFE",
+  "navigationBarTextStyle": "white"
+}

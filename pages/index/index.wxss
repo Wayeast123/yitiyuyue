@@ -1,0 +1,195 @@
+/* pages/myReport/myReport.wxss */
+page{
+  background-color: #F6F6F6;
+}
+.flex{
+  display: flex;
+}
+.bg{
+  width: 100%;
+  height: 110rpx;
+  border-bottom-left-radius: 50rpx;
+  border-bottom-right-radius: 50rpx;
+  background-color: #5997FE;
+}
+.contain{
+  padding: 10rpx 32rpx;
+  /* margin-top: 100rpx; */
+  margin-top: 28rpx;
+  /* margin-top: -80rpx; */
+}
+.search-header{
+  padding: 40rpx 30rpx;
+  background-color: #fff;
+  border-radius: 20rpx;
+  box-shadow: 0 3rpx 6rpx rgba(137, 135, 135, .4);
+  text-align: center;
+  letter-spacing: 2rpx;
+  font-weight: 600;
+  color: #333;
+}
+.search-con{
+  margin-top: 40rpx;
+}
+.report-con{
+  background-color: #fff;
+  border-radius: 14rpx;
+  box-shadow: 0 3rpx 6rpx rgba(137, 135, 135, .2);
+  padding: 30rpx;
+  justify-content: space-between;
+  margin-bottom: 35rpx;
+}
+.item-img{
+  width: 45rpx;
+  height: 45rpx;
+}
+.btn{
+  display: inline-block;
+  font-size: 27rpx;
+  padding: 0rpx 26rpx;
+  color: #fff;
+  background-color: #609CFF;
+  border-radius: 10rpx;
+  margin: 0rpx;
+}
+.collect-btn{
+  background-color: #fff;
+  color: #609CFF;
+  border: 1px solid #609CFF;
+}
+.write-btn{
+  background-color: #609CFF;
+  color: #fff;
+  border: 1px solid #609CFF;
+}
+.item-left{
+  justify-content: flex-end;
+  align-items: center;
+}
+.item-center{
+  margin-left: 30rpx;
+}
+.item-right{
+  justify-content: right;
+}
+.report-title{
+  color: #666;
+  font-weight: 600;
+  font-size: 30rpx;
+}
+.report-area{
+  color: #666;
+  font-size: 29rpx;
+  margin-left: 20rpx;
+}
+.font-style{
+  font-size: 24rpx;
+  color: #999;
+  font-weight: 600;
+}
+.report-date{
+  margin-top: 15rpx;
+}
+/* 转PDF弹出层样式 */
+.mask{
+  width:100%;
+  height:100%;
+  position:fixed;
+  top:0rpx;
+  z-index: 1000;
+  background-color: rgba(8, 8, 8, 0.7);
+}
+.detail-con{
+  position: fixed;
+  box-sizing: border-box;
+  width: 100%;
+  bottom: 0rpx;
+  left: 0rpx;
+  z-index: 1200;
+  background-color: #fff;
+}
+.detail-con{
+  height: 40vh;
+  border-top-left-radius: 10rpx;
+  border-top-right-radius: 10rpx;
+  padding: 30rpx 20rpx 20rpx 40rpx;
+}
+.contain{
+  position: absolute;
+  top:0rpx;
+  left: 0rpx;
+  z-index: 100;
+  width: 100vw;
+  box-sizing: border-box;
+}
+.sheet-header{
+  text-align: center;
+}
+.header-icon{
+  justify-content: flex-end;
+  margin-top: -48rpx;
+}
+.contact-con{
+  width: 100%;
+  font-size: 30rpx;
+  color: #181818;
+  text-align: center;
+  letter-spacing: 4rpx;
+  font-weight: 600;
+}
+space-margin{
+  margin: 20rpx 0rpx;
+}
+.phone-number{
+  color: #181818;
+  letter-spacing: 3rpx;
+  font-size: 34rpx;
+  margin-left: 10rpx;
+}
+.space-margin{
+  justify-content: center;
+  align-items: center;
+  margin: 50rpx 0rpx;
+}
+.icon-size{
+  font-size: 38rpx;
+}
+.gennerateBtn{
+  padding: 10rpx 200rpx;
+  border-radius: 40rpx;
+  background-color: #3186FF;
+  color: #fff;
+  letter-spacing: 0rpx;
+  font-size: 30rpx;
+  line-height: 55rpx;
+  border: 1px solid #3186FF;
+}
+.btn-con{
+  justify-content: center;
+}
+.margin-left-space{
+  margin-left: 15rpx;
+}
+.disable-line{
+  background-color: #F2F5FF;
+  border: 1px solid #B6D2FC;
+}
+.list-img{
+  width: 340rpx;
+  height: 340rpx;
+  opacity: 0.6;
+}
+.empty{
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+  justify-content: center;
+  height: 80vh;
+}
+.empty-text{
+  font-size: 36rpx;
+  color: #999;
+  margin-top: 35rpx;
+  text-align: center;
+}
+

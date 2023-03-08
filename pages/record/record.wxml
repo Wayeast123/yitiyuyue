@@ -1,0 +1,33 @@
+<!--pages/record/record.wxml-->
+<view class="flex contain" wx:if="{{list.length > 0}}">
+  <!-- 筛选结果列表 -->
+  <view class="search-con">
+    <block wx:for="{{list}}" wx:key="item">
+      <view class="flex list-contain" bindtap="navSchool">
+        <view class="list-con">
+          <view class="flex con-title">
+            <text>{{item.booking_date}}</text>
+            <text class="space-margin">{{item.session_time}}</text>
+          </view>
+          <view class="flex con-label">
+            <view class="con-base-info">
+              <text class="label-text {{item.gender == '女' ? 'label-text-female' : ''}}">{{item.name}}</text>
+              <text class="rush {{item.gender == '女' ? 'stable' : 'protect'}} rush-label">{{item.gender}}</text>    
+              <text class="space-margin">{{item.stu_number}}</text>
+            </view>
+          </view>
+          <view class="info">
+            <view class="space-margin-li">{{item.college}}</view>
+          </view>
+        </view>
+      </view>
+    </block>
+  </view>
+</view>
+<view class="flex contain contain-empty" wx:else>
+    <view class="flex empty">
+      <image src="../../assets/images/error.png" class="list-img"></image>
+      <view class="empty-text">暂无预约历史记录！</view>
+    </view>
+</view>
+<i-toast id="toast" />

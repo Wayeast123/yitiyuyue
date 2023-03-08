@@ -1,0 +1,54 @@
+<!--pages/passCard/passCard.wxml-->
+<view class="flex contain" wx:if="{{list.length > 0}}">
+  <view class="fill-con" wx:for="{{list}}" wx:key="item">
+    <view class="fill-title">{{item.booking_date}}</view>
+    <view class="fill-title-little">{{item.session_time}}</view>
+    <view class="info-style">
+      <text>{{item.name}}</text>
+      <text class="space-margin">{{item.stu_number}}</text>
+    </view>
+    <view class="info-style info-label">
+      <text>{{item.gender}}</text>
+      <text class="space-margin">{{item.college}}</text>
+    </view>
+    <view class="flex flex-center" animation='{{attentionAnim}}'>
+      <image src="../../assets/images/up-arrows.png" class="list-img no-opacity"></image>
+    </view>
+    <!-- <view class="info-style number">当前号数：{{item.number}}</view> -->
+    <button class="cancel-btn" bindtap="cancelCertain">取消预约</button>
+    <i-modal data-id="{{item.booking_id}}" visible="{{ visible }}" bind:ok="cancelReservation" bind:cancel="handleCancel">
+      <view>是否确认取消当前预约？</view>
+    </i-modal>
+  </view>
+</view>
+<view class="flex contain" wx:elif="{{stuNum}}">
+  <block wx:for="{{listMe}}" wx:key="item">
+    <view class="fill-con" wx:if="{{item.stu_number == stuNum}}">
+      <view class="fill-title">{{item.booking_date}}</view>
+      <view class="fill-title-little">{{item.session_time}}</view>
+      <view class="info-style">
+        <text>{{item.name}}</text>
+        <text class="space-margin">{{item.stu_number}}</text>
+      </view>
+      <view class="info-style info-label">
+        <text>{{item.gender}}</text>
+        <text class="space-margin">{{item.college}}</text>
+      </view>
+      <view class="flex flex-center" animation='{{attentionAnim}}'>
+        <image src="../../assets/images/up-arrows.png" class="list-img no-opacity"></image>
+      </view>
+      <!-- <view class="info-style number">当前号数：{{item.number}}</view> -->
+      <button class="cancel-btn" bindtap="cancelCertain">取消预约</button>
+      <i-modal data-id="{{item.booking_id}}" visible="{{ visible }}" bind:ok="cancelReservation" bind:cancel="handleCancel">
+        <view>是否确认取消当前预约？</view>
+      </i-modal>
+    </view>
+  </block>
+</view>
+<view class="flex contain contain-empty" wx:else>
+    <view class="flex empty">
+      <image src="../../assets/images/error.png" class="list-img"></image>
+      <view class="empty-text">对不起，暂无预约信息！</view>
+    </view>
+</view>
+<i-toast id="toast" />
